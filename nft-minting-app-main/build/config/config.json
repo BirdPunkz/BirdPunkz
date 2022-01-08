@@ -1,0 +1,22 @@
+{
+  "CONTRACT_ADDRESS": "0x0e1Fd6f9270FdF0dB933b997a85A3c24cd5Ba193",
+  "SCAN_LINK": "https://mumbai.polygonscan.com/address/0x0e1Fd6f9270FdF0dB933b997a85A3c24cd5Ba193",
+  "NETWORK": {
+    "NAME": "Polygon",
+    "SYMBOL": "MATIC",
+    "ID": 80001
+  },
+  "NFT_NAME": "BirdPunkz",
+  "SYMBOL": "BirdPunkzNFT",
+  "MAX_SUPPLY": 9969,
+  "WEI_COST": 4000000000000000000,
+  "DISPLAY_COST": 0.0069,
+  "GAS_LIMIT": 285000,
+  "DISCORD": "Discord",
+  "DISCORD_LINK": "https://discord.gg/X64SJGSXme",
+  "TWITTER": "Twitter",
+  "TWITTER_LINK": "https://twitter.com/BirdPunkz",
+  "MARKETPLACE": "Opensea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/birdpunkz",
+  "SHOW_BACKGROUND": true
+}
