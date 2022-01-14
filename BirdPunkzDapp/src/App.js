@@ -124,7 +124,7 @@ function App() {
 
   const claimNFTs = () => {
     if (isPaused) {
-      setFeedback("The sale is paused follow twitter/discord for updates.");
+      setFeedback("The mint isn't live yet follow twitter/discord for updates!");
       setClaimingNft(false);
       return
     }
