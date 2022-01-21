@@ -75,9 +75,9 @@ export const StyledLogo = styled.img`
 `;
 
 export const StyledLogo2 = styled.img`
-  width: 250px;
+  width: 150px;
   @media (min-width: 767px) {
-    width: 250px;
+    width: 150px;
   }
   transition: width 0.5s;
   transition: height 0.5s;
