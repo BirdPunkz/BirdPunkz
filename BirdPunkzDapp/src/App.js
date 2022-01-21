@@ -83,6 +83,7 @@ export const StyledLogo2 = styled.img`
   transition: height 0.5s;
 `;
 
+
 export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   border: 4px dashed var(--secondary);
@@ -97,6 +98,8 @@ export const StyledImg = styled.img`
   }
   transition: width 0.5s;
 `;
+
+
 
 export const StyledLink = styled.a`
   color: var(--secondary);
@@ -133,7 +136,7 @@ function App() {
 
   const claimNFTs = () => {
     if (isPaused) {
-      setFeedback("The mint isn't live yet follow twitter/discord for updates!");
+      setFeedback("The sale is paused follow twitter/discord for updates.");
       setClaimingNft(false);
       return
     }
@@ -491,7 +494,6 @@ function App() {
             gas limit.
           </s.TextDescription>
         </s.Container>
-      </s.Container>
         <s.SpacerLarge />
         <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledLogo2 alt={"example"} src={"/config/images/raritysniper_white.png"} />
