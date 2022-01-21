@@ -74,6 +74,15 @@ export const StyledLogo = styled.img`
   transition: height 0.5s;
 `;
 
+export const StyledLogo2 = styled.img`
+  width: 250px;
+  @media (min-width: 767px) {
+    width: 250px;
+  }
+  transition: width 0.5s;
+  transition: height 0.5s;
+`;
+
 export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   border: 4px dashed var(--secondary);
@@ -482,6 +491,11 @@ function App() {
             gas limit.
           </s.TextDescription>
         </s.Container>
+      </s.Container>
+        <s.SpacerLarge />
+        <s.Container flex={1} jc={"center"} ai={"center"}>
+            <StyledLogo2 alt={"example"} src={"/config/images/raritysniper_white.png"} />
+          </s.Container>
       </s.Container>
     </s.Screen>
   );
