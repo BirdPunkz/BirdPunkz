@@ -66,18 +66,18 @@ export const ResponsiveWrapper = styled.div`
 `;
 
 export const StyledLogo = styled.img`
-  width: 500px;
+  width: 600px;
   @media (min-width: 767px) {
-    width: 500px;
+    width: 600px;
   }
   transition: width 0.5s;
   transition: height 0.5s;
 `;
 
 export const StyledLogo2 = styled.img`
-  width: 150px;
+  width: 250px;
   @media (min-width: 767px) {
-    width: 150px;
+    width: 250px;
   }
   transition: width 0.5s;
   transition: height 0.5s;
@@ -234,7 +234,7 @@ function App() {
       <s.Container
         flex={1}
         ai={"center"}
-        style={{ padding: 24, backgroundColor: "var(--primary)" }}
+        style={{ padding: 48, paddingTop: 12, paddingBottom: 48, backgroundColor: "var(--primary)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
