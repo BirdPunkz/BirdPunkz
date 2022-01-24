@@ -66,12 +66,9 @@ export const ResponsiveWrapper = styled.div`
 `;
 
 export const StyledLogo = styled.img`
-  width: 600px;
-  height: 300px;
-  object-fit: contain;
-  @media (min-width: 767px) {
+    height: 300px;
+    object-fit: contain;
     width: 100%;
-  }
   transition: width 0.5s;
   transition: height 0.5s;
 `;
