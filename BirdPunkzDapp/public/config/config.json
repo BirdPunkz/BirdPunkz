@@ -1,17 +1,17 @@
 {
-  "CONTRACT_ADDRESS": "0x029eb184EB1054e1542FbFA1F25FFbb69f388418",
-  "SCAN_LINK": "https://etherscan.io/address/0x029eb184EB1054e1542FbFA1F25FFbb69f388418",
+  "CONTRACT_ADDRESS": "0x941E4843fF0f2775E9C081b1c49bAD5D7FC9Fd44",
+  "SCAN_LINK": "https://polygonscan.com/address/0x941e4843ff0f2775e9c081b1c49bad5d7fc9fd44",
   "NETWORK": {
-    "NAME": "Ethereum",
-    "SYMBOL": "ETH",
-    "ID": 1
+    "NAME": "Matic",
+    "SYMBOL": "MATIC",
+    "ID": 137
   },
-  "NFT_NAME": "BirdPunkz",
-  "SYMBOL": "BPNFT",
+  "NFT_NAME": "BirdPunkz Classic Collection",
+  "SYMBOL": "BPCNFT",
   "MAX_SUPPLY": 9969,
-  "WEI_COST": 6900000000000000,
-  "DISPLAY_COST": 0.0069,
-  "GAS_LIMIT": 285000,
+  "WEI_COST": 10000000000000000000,
+  "DISPLAY_COST": 10,
+  "GAS_LIMIT": 245000,
   "DISCORD": "Discord",
   "DISCORD_LINK": "https://discord.gg/X64SJGSXme",
   "TWITTER": "Twitter",
