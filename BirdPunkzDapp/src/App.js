@@ -66,7 +66,7 @@ export const ResponsiveWrapper = styled.div`
 `;
 
 export const StyledLogo = styled.img`
-    height: 300px;
+    height: 200px;
     object-fit: contain;
     width: 100%;
   transition: width 0.5s;
@@ -78,6 +78,13 @@ export const StyledLogo2 = styled.img`
   @media (min-width: 767px) {
     width: 250px;
   }
+  transition: width 0.5s;
+  transition: height 0.5s;
+`;
+export const Roadmap = styled.img`
+width: 100%;
+height: 100%;
+object-fit: contain;
   transition: width 0.5s;
   transition: height 0.5s;
 `;
@@ -114,6 +121,7 @@ function App() {
   const [mintAmount, setMintAmount] = useState(1);
   const [isPaused, setIsPaused] = useState(true);
   //const [isWhitelisted, setIsWhitelisted] = useState(false);
+  //const [isFreeMint, setIsFreeMint] = useState(true);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
@@ -139,6 +147,20 @@ function App() {
       setClaimingNft(false);
       return
     }
+    /*if (isFreeMint){
+        CONFIG.WEI_COST = 0,
+        CONFIG.DISPLAY_COST = 0
+        setClaimingNft(true);
+        return
+    }
+    if (!isFreeMint){
+      setFeedback("Not Free Mint");
+      CONFIG.WEI_COST = 10000000000000000000,
+      CONFIG.DIPLAY_COST = 10
+      setClaimingNft(true);
+      return
+ }*/
+
   /*  if (!isWhitelisted) {
       setFeedback("You are not allowed to buy follow twitter/discord for updates.");
       setClaimingNft(false);
@@ -187,8 +209,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 5) {
-      newMintAmount = 5;
+    if (newMintAmount > 30) {
+      newMintAmount = 30;
     }
     setMintAmount(newMintAmount);
   };
@@ -196,6 +218,7 @@ function App() {
   const getData = () => {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
       getIsPaused();
+      //getIsFreeMint();
      // getIsWhitelisted(blockchain.account);
       dispatch(fetchData(blockchain.account));
     }
@@ -216,6 +239,10 @@ function App() {
     await blockchain.smartContract.methods.paused().call().then((res) => {setIsPaused(res)});
   }
 
+  /*const getIsFreeMint = async() => {
+    await blockchain.smartContract.methods.paused().call().then((res) => {setIsFreeMint(res)});
+  }*/
+
  /* const getIsWhitelisted = async(Address) => {
     await blockchain.smartContract.methods.isWhitelisted(Address).call().then((res) => {setIsWhitelisted(res)});
   }*/
@@ -233,16 +260,19 @@ function App() {
       <s.Container
         flex={1}
         ai={"center"}
-        style={{ padding: 48, paddingTop: 12, paddingBottom: 48, backgroundColor: "var(--primary)" }}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
+        style={{ padding: 0, paddingTop: 24, paddingBottom: 48, backgroundColor: "var(--primary)" }}
+        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg2.png" : null}
       >
+
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
-        <s.SpacerSmall />
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+
+        <ResponsiveWrapper flex={1} style={{ padding: 74 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg alt={"example"} src={"/config/images/example.gif"} />
           </s.Container>
+
           <s.SpacerLarge />
+
           <s.Container
             flex={2}
             jc={"center"}
@@ -493,11 +523,17 @@ function App() {
             gas limit.
           </s.TextDescription>
         </s.Container>
-        <s.SpacerLarge />
-        <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledLogo2 alt={"example"} src={"/config/images/raritysniper_white.png"} />
+
+          <s.SpacerLarge />
+           <s.Container flex={1} jc={"center"} ai={"center"}>
+          <Roadmap alt={"roadmap"} src={"/config/images/.png"} />
           </s.Container>
+          <s.SpacerLarge /> 
+          
+
+
       </s.Container>
+
     </s.Screen>
   );
 }
